@@ -1,6 +1,7 @@
 package Base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -54,6 +55,11 @@ public class Base {
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
        driver.get(prop.getProperty("url"));
+
+   }
+   public void scroll(int j){
+       JavascriptExecutor jse = (JavascriptExecutor) driver;
+       jse.executeScript("window.scrollBy(0,"+j+")","");
 
    }
 
