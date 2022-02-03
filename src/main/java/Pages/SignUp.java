@@ -62,6 +62,7 @@ public class SignUp extends Base {
 
     //initializing page factory
     public SignUp(){
+
         PageFactory.initElements(driver,this);
 
     }
@@ -99,28 +100,28 @@ public class SignUp extends Base {
         passImage.isDisplayed();
 
 
-        if (error.size() > 0) {
+//        if (error.size() > 0) {
+//
+//            clickDrList.click();
+//            List<WebElement> drmenu = driver.findElements(By.xpath("//ul/li/span[@class='iti__dial-code']"));
+//
+//            for (int i = 0; i < drmenu.size(); i++) {
+//
+//                WebElement allElements = drmenu.get(i);
+//                String innerHTML = allElements.getAttribute("innerHTML");
+//                if (innerHTML.contains("+971")) {
+//                    allElements.click();
+//                    register.click();
+//
+//                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//
+//                    passImage.isDisplayed();
+//
+//                }
+//            }
 
-            clickDrList.click();
-            List<WebElement> drmenu = driver.findElements(By.xpath("//ul/li/span[@class='iti__dial-code']"));
 
-            for (int i = 0; i < drmenu.size(); i++) {
-
-                WebElement allElements = drmenu.get(i);
-                String innerHTML = allElements.getAttribute("innerHTML");
-                if (innerHTML.contains("+971")) {
-                    allElements.click();
-                    register.click();
-
-                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-                    passImage.isDisplayed();
-
-                }
-            }
-
-
-        }
+//        }
 
         return new Login();
     }

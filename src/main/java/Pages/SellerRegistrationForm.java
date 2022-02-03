@@ -126,8 +126,6 @@ public class SellerRegistrationForm extends Base {
             LegalRepresentative.sendKeys(f.name().fullName());
             Address.sendKeys(f.address().fullAddress());
             CompanyName.sendKeys(f.company().name());
-
-
         }
 
         public void Agree(){
@@ -140,9 +138,7 @@ public class SellerRegistrationForm extends Base {
         public  void  Successs(){
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
             SuccessToast.isDisplayed();
-
-
-        }
-
     }
+
+}
 
